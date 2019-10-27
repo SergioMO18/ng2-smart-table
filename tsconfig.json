@@ -1,30 +1,23 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
-    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
+    "target": "es5",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "es2016",
       "dom"
     ],
-    "paths": {
-      "ng2-smart-table": [
-        "dist/ng2-smart-table"
-      ],
-      "ng2-smart-table/*": [
-        "dist/ng2-smart-table/*"
-      ]
-    }
+    "plugins": [
+      { "name": "tslint-language-service"}
+    ]
   }
 }
